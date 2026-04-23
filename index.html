@@ -3,141 +3,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>金澤 2027｜6天5夜暖心行程</title>
+  <title>金澤 2027｜6天5夜行程</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ember: '#ff7a33',
-            ember2: '#ffb86b',
-            night: '#0b1220'
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { colors: { ember: '#ff7a33', ember2: '#ffb86b', night: '#0b1220' } } } }
   </script>
 </head>
 <body class="bg-night text-slate-100 antialiased">
   <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
-      <!-- Header -->
       <header class="mb-8 text-center">
-        <h1 class="text-4xl font-extrabold text-amber-300 drop-shadow-lg">金澤暖心 6天5夜（2027）</h1>
-        <p class="mt-2 text-slate-300">不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。暖心爐火風格設計，適合家庭與朋友。</p>
+        <h1 class="text-3xl font-bold text-amber-200">金澤 6天5夜（2027）</h1>
+        <p class="mt-2 text-slate-300">不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。下面為每日重點與景點說明。</p>
       </header>
 
-      <!-- Hero / Lead block (Tailwind UI style) -->
-      <section class="relative bg-gradient-to-br from-[#071021] via-[#0b1220] to-[#1a1f29] rounded-2xl overflow-hidden shadow-2xl mb-10">
-        <div class="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-900 via-transparent to-transparent pointer-events-none"></div>
-        <div class="px-6 py-10 sm:px-10 sm:py-16 lg:py-20">
-          <div class="lg:flex lg:items-center lg:justify-between">
-            <div class="max-w-2xl">
-              <h2 class="text-3xl font-bold text-white">寒冬裡的暖爐 — 金澤 2027 行程</h2>
-              <p class="mt-3 text-slate-200">像圍在爐邊一樣溫暖的旅程設計，簡潔、視覺華麗。點選每日展開查看詳細行程與代表圖片。</p>
-              <div class="mt-6 flex gap-3">
-                
-                
-              </div>
-            </div>
-            <div class="mt-8 lg:mt-0 lg:ml-8 w-full max-w-sm rounded-lg overflow-hidden shadow-inner">
-              <img src="images/day1.jpg" alt="金澤抵達" class="w-full h-48 object-cover brightness-90" />
-            </div>
+      <main id="itinerary" class="space-y-6">
+
+        <details class="bg-[#071026]/50 rounded-2xl p-6" >
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 1｜TPE → KIX → 金澤</summary>
+          <div class="mt-4 text-slate-300">
+            <h4 class="font-semibold">早上</h4>
+            <p>從台北出發，飛往關西機場。建議確認行李與入境資料，預留通關時間。</p>
+
+            <h4 class="font-semibold mt-3">中午</h4>
+            <p>抵達 KIX，入境後搭車前往金澤（約2–3小時，視交通方式而定）。</p>
+
+            <h4 class="font-semibold mt-3">下午</h4>
+            <p>辦理入住並休息。若抵達時間允許，可在金澤站周邊散步並熟悉交通路線。</p>
+
+            <h4 class="font-semibold mt-3">晚上</h4>
+            <p>在金澤站或香林坊附近用晚餐，準備隔天行程。</p>
+
+            <div class="mt-3 text-sm text-slate-400">交通：TPE → KIX → 關西機場搭車 → 金澤站 → 飯店</div>
           </div>
-        </div>
-      </section>
+        </details>
 
-      <!-- Itinerary grid using Tailwind UI Block styles -->
-      <section id="itinerary" class="space-y-6">
+        <details class="bg-[#071026]/50 rounded-2xl p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 2｜白山一里野溫泉滑雪場（雪日）</summary>
+          <div class="mt-4 text-slate-300">
+            <p class="mb-2">全天以滑雪場活動與溫泉體驗為主，建議提前預訂雪具與溫泉住宿。</p>
+            <h4 class="font-semibold">白山一里野滑雪場</h4>
+            <p>滑雪與雪上活動，適合全家。初學者可預約教練或租借容易上手的雪具。</p>
 
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day1.jpg" alt="抵達金澤" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 1｜TPE → KIX → 金澤</h3>
-              <p class="mt-2 text-slate-300"><strong>早上</strong><br/>從台北出發，飛往關西機場。</p>
-              <p class="mt-2 text-slate-300"><strong>中午</strong><br/>抵達 KIX，入境後直接搭車前往金澤。</p>
-              <p class="mt-2 text-slate-300"><strong>下午</strong><br/>以移動為主，抵達金澤後先辦理入住、稍微休息。如果時間還行，可以在金澤站周邊逛一下。</p>
-              <p class="mt-2 text-slate-300"><strong>晚上</strong><br/>金澤站附近吃晚餐，早點休息。</p>
-              <div class="mt-4 text-sm text-slate-400">交通順序：TPE → KIX → 關西機場搭車 → 金澤站 → 飯店</div>
-            </div>
+            <h4 class="font-semibold mt-3">一里野溫泉</h4>
+            <p>晚間安排溫泉與當地料理，放鬆肌肉並體驗日式旅館服務。</p>
+
+            <div class="mt-3 text-sm text-slate-400">交通：金澤飯店 → 白山一里野（巴士或包車）→ 溫泉住宿</div>
           </div>
-        </article>
+        </details>
 
+        <details class="bg-[#071026]/50 rounded-2xl p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 3｜兼六園 → 金澤城公園 → 21世紀美術館</summary>
+          <div class="mt-4 text-slate-300">
+            <h4 class="font-semibold">兼六園（早晨）</h4>
+            <p>日本三大名園之一，冬季常見雪景。建議步行路線並注意地面濕滑。</p>
 
-        <!-- Day card template (repeated) -->
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day2.jpg" alt="白山一里野滑雪場" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 2｜白山一里野溫泉滑雪場玩雪 → 住一晚</h3>
-              <p class="mt-2 text-slate-300">從金澤出發前往白山一里野滑雪場，這天主打玩雪、雪橇與溫泉放鬆。</p>
-              <div class="mt-4 text-sm text-slate-400">交通：金澤飯店 → 白山一里野 → 溫泉住宿</div>
-            </div>
+            <h4 class="font-semibold mt-3">金澤城公園</h4>
+            <p>可參觀城郭與庭園，拍攝建築與景觀照。</p>
+
+            <h4 class="font-semibold mt-3">21世紀美術館（下午）</h4>
+            <p>現代藝術展覽為室內行程的好選擇，事先線上查展覽資訊並預約門票（如需）。</p>
+
+            <div class="mt-3 text-sm text-slate-400">交通：一里野 → 金澤市區（巴士）→ 步行或短程公車</div>
           </div>
-        </article>
+        </details>
 
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day3.jpg" alt="兼六園冬景" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 3｜兼六園 → 金澤城公園 → 21世紀美術館</h3>
-              <p class="mt-2 text-slate-300">回到金澤市區慢遊兼六園與金澤城，午後參觀21世紀美術館。</p>
-              <div class="mt-4 text-sm text-slate-400">交通：一里野 → 金澤市區 → 兼六園 → 21世紀美術館</div>
-            </div>
+        <details class="bg-[#071026]/50 rounded-2xl p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 4｜近江町市場 → 金箔體驗 → 東茶屋街 → 前往京都</summary>
+          <div class="mt-4 text-slate-300">
+            <h4 class="font-semibold">近江町市場（早餐/早午餐）</h4>
+            <p>海鮮丼與當地海產為招牌，建議早到以避免人潮高峰。</p>
+
+            <h4 class="font-semibold mt-3">金箔工藝／手作體驗</h4>
+            <p>短時的金箔貼飾體驗，適合帶回作為紀念品；請事先預約。</p>
+
+            <h4 class="font-semibold mt-3">東茶屋街</h4>
+            <p>保存良好的歷史街區，適合散步、喝茶與購買手信。</p>
+
+            <div class="mt-3 text-sm text-slate-400">傍晚交通：金澤 → 京都（電車）</div>
           </div>
-        </article>
+        </details>
 
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day4.jpg" alt="近江町市場海鮮" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 4｜近江町市場 → 金箔工藝 → 東茶屋街 → 京都</h3>
-              <p class="mt-2 text-slate-300">早上近江町市場品嘗海鮮，中午手作金箔，下午東茶屋街散步，傍晚前往京都。</p>
-              <div class="mt-4 text-sm text-slate-400">交通：金澤 → 京都</div>
-            </div>
+        <details class="bg-[#071026]/50 rounded-2xl p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 5｜京都：清水寺、祇園、錦市場</summary>
+          <div class="mt-4 text-slate-300">
+            <h4 class="font-semibold">清水寺與二年坂/三年坂</h4>
+            <p>歷史景點與古風商街，建議穿舒適鞋子並留意階梯與坡道。</p>
+
+            <h4 class="font-semibold mt-3">祇園與花見小路</h4>
+            <p>傍晚的散步路線，可能會遇到舞妓或藝伎行經的街景。</p>
+
+            <h4 class="font-semibold mt-3">錦市場</h4>
+            <p>傳統食材與小吃集中地，適合購買伴手禮與品嘗當地小吃。</p>
+
+            <div class="mt-3 text-sm text-slate-400">交通：京都市區步行與公車/地鐵搭配</div>
           </div>
-        </article>
+        </details>
 
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day5.jpg" alt="京都清水寺" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 5｜京都經典散步日</h3>
-              <p class="mt-2 text-slate-300">清水寺、二年坂、祇園與錦市場等京都經典散步路線。</p>
-              <div class="mt-4 text-sm text-slate-400">交通：京都市區步行為主</div>
-            </div>
+        <details class="bg-[#071026]/50 rounded-2xl p-6">
+          <summary class="cursor-pointer text-lg font-semibold text-amber-200">Day 6｜京都半日 → KIX → TPE</summary>
+          <div class="mt-4 text-slate-300">
+            <h4 class="font-semibold">上午：京都站或京都鐵道博物館</h4>
+            <p>視團體需求選擇：親子可前往鐵道博物館；行李收整需預留時間。</p>
+
+            <h4 class="font-semibold mt-3">離程</h4>
+            <p>回飯店取行李，前往關西機場搭機返回台北。</p>
+
+            <div class="mt-3 text-sm text-slate-400">交通：京都飯店 → 京都站 → KIX → TPE</div>
           </div>
-        </article>
+        </details>
 
-        <article class="bg-gradient-to-br from-[#0f1724]/60 to-[#0b1220]/60 rounded-2xl p-6 shadow-lg border border-transparent hover:border-amber-600 transition-all">
-          <div class="sm:flex sm:items-start sm:gap-6">
-            <div class="sm:w-1/3">
-              <img src="images/day6.jpg" alt="京都站/鐵道博物館" class="w-full h-40 object-cover rounded-xl shadow-md" />
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex-1">
-              <h3 class="text-xl font-semibold text-amber-200">Day 6｜京都半日 → KIX → TPE</h3>
-              <p class="mt-2 text-slate-300">京都半日活動後前往關西機場返回台北。</p>
-              <div class="mt-4 text-sm text-slate-400">交通：京都 → KIX → TPE</div>
-            </div>
-          </div>
-        </article>
-
-      </section>
+      </main>
 
       <footer class="mt-12 text-center text-slate-400">
-        <p>此頁以 Tailwind UI 風格重構，營造寒冬裡爐火般的暖心感受。祝旅途愉快！</p>
+        <p>行程內容以景點與交通為主，已依天分段與景點說明，便於現場操作與時間安排。</p>
       </footer>
     </div>
   </div>
