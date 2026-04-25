@@ -36,6 +36,11 @@
   <style>
     html { scroll-behavior: smooth; }
     summary::-webkit-details-marker { display: none; }
+    .day-link.active {
+      background: #23201d;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(35, 32, 29, 0.14);
+    }
     .paper {
       background-image:
         radial-gradient(circle at 20% 10%, rgba(255,255,255,.92), transparent 24rem),
@@ -68,7 +73,7 @@
             金澤<br><span class="text-moss">6天5夜</span>
           </h1>
           <p class="mt-5 max-w-2xl text-base leading-8 text-sumi/70 sm:text-lg">
-            不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。整體走輕盈明亮的旅行感，把雪景、溫泉、日式街景與京都收尾整理成一頁就能快速掌握的行程。
+            不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。把雪景、溫泉、日式街景與京都收尾整理在同一頁，出發前快速掌握每天重點。
           </p>
 
           <div class="mt-8 grid gap-3 text-sm sm:grid-cols-3">
@@ -77,8 +82,8 @@
               <div class="mt-2 text-2xl font-semibold">6 天 5 夜</div>
             </div>
             <div class="rounded-3xl border border-line bg-white/75 p-4 shadow-sm">
-              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Style</div>
-              <div class="mt-2 text-base font-semibold">暖色、慢節奏、適合親子</div>
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Pace</div>
+              <div class="mt-2 text-base font-semibold">慢節奏、適合親子</div>
             </div>
             <div class="rounded-3xl border border-line bg-white/75 p-4 shadow-sm">
               <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Transit</div>
@@ -103,7 +108,7 @@
               </ol>
             </div>
             <div class="mt-8 rounded-[1.6rem] border border-white/15 bg-white/10 p-5 text-sm leading-7 text-white/78 backdrop-blur">
-              最新版介面的取向：少一點裝飾性卡片堆疊，多一點「決策順序」。先讓人知道路線、節奏與每天任務，再進細節；這比單純漂亮更耐用。
+              從抵達金澤、白山一里野雪景與溫泉，到金澤市區散步，再以京都作為旅程尾聲；每天只保留最需要掌握的路線與節奏。
             </div>
           </div>
         </section>
@@ -112,24 +117,24 @@
 
     <nav class="sticky top-3 z-10 mt-5 overflow-x-auto rounded-full border border-white/80 bg-white/80 p-2 shadow-sm backdrop-blur-xl">
       <div class="flex min-w-max gap-2 text-sm font-semibold text-sumi/70">
-        <a class="rounded-full bg-sumi px-4 py-2 text-white" href="#day1">Day 1</a>
-        <a class="rounded-full px-4 py-2 hover:bg-mist" href="#day2">Day 2</a>
-        <a class="rounded-full px-4 py-2 hover:bg-mist" href="#day3">Day 3</a>
-        <a class="rounded-full px-4 py-2 hover:bg-mist" href="#day4">Day 4</a>
-        <a class="rounded-full px-4 py-2 hover:bg-mist" href="#day5">Day 5</a>
-        <a class="rounded-full px-4 py-2 hover:bg-mist" href="#day6">Day 6</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day1">Day 1</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day2">Day 2</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day3">Day 3</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day4">Day 4</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day5">Day 5</a>
+        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day6">Day 6</a>
       </div>
     </nav>
 
     <section class="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
       <aside class="rounded-[2rem] border border-white/80 bg-white/70 p-6 shadow-sm backdrop-blur-xl lg:sticky lg:top-24 lg:self-start">
-        <p class="text-xs font-bold uppercase tracking-[0.24em] text-moss">Trip Logic</p>
+        <p class="text-xs font-bold uppercase tracking-[0.24em] text-moss">Overview</p>
         <h2 class="mt-3 font-display text-3xl font-semibold">每日行程總覽</h2>
-        <p class="mt-3 text-sm leading-7 text-sumi/65">改成比較像旅遊攻略卡片的閱讀方式，掃過去就能掌握每一天的重點。</p>
+        <p class="mt-3 text-sm leading-7 text-sumi/65">從移動日、雪日、金澤市區到京都收尾，快速掌握每一天的主要節奏。</p>
         <div class="mt-6 space-y-3 text-sm">
           <div class="rounded-2xl bg-tea/60 p-4"><strong>主要亮點：</strong>滑雪場、兼六園、東茶屋街</div>
-          <div class="rounded-2xl bg-clay/60 p-4"><strong>旅程情緒：</strong>雪景＋溫泉 → 金澤街景 → 京都收尾</div>
-          <div class="rounded-2xl bg-mist/80 p-4"><strong>閱讀設計：</strong>每一天只保留「任務、亮點、交通」三層。</div>
+          <div class="rounded-2xl bg-clay/60 p-4"><strong>旅程節奏：</strong>雪景＋溫泉 → 金澤街景 → 京都收尾</div>
+          <div class="rounded-2xl bg-mist/80 p-4"><strong>交通主軸：</strong>機場、鐵道、市區步行與短程大眾運輸。</div>
         </div>
       </aside>
 
@@ -286,8 +291,40 @@
     </section>
 
     <footer class="mt-8 rounded-[2rem] border border-white/80 bg-white/70 px-6 py-7 text-center text-sm leading-7 text-sumi/62 shadow-sm backdrop-blur-xl">
-      這一版已補上：<span class="font-semibold text-moss">1. 更成熟的旅遊封面與路線視覺</span>、<span class="font-semibold text-moss">2. sticky day navigation</span>、<span class="font-semibold text-moss">3. 以「決策順序」重排資訊層級</span>。內容維持原行程不變。
+      金澤、白山一里野與京都的 6 天 5 夜行程；出發前可依每日卡片快速檢查路線、景點與交通節奏。
     </footer>
   </div>
+  <script>
+    const dayLinks = Array.from(document.querySelectorAll('.day-link'));
+    const daySections = dayLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    function setActiveDay(id) {
+      dayLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
+
+    if ('IntersectionObserver' in window && daySections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveDay(visible.target.id);
+      }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.15, 0.35, 0.6] });
+
+      daySections.forEach((section) => observer.observe(section));
+    }
+
+    dayLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const targetId = link.getAttribute('href').slice(1);
+        setActiveDay(targetId);
+      });
+    });
+
+    setActiveDay(location.hash ? location.hash.slice(1) : 'day1');
+  </script>
 </body>
 </html>
