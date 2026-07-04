@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>金澤 2027｜6天5夜行程</title>
   <meta name="description" content="金澤 2027：台北、關西機場、金澤、白山一里野、京都的 6 天 5 夜不自駕旅行行程。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -24,10 +27,12 @@
           },
           boxShadow: {
             soft: '0 20px 60px rgba(35, 32, 29, 0.10)',
-            lift: '0 14px 36px rgba(88, 116, 93, 0.16)'
+            lift: '0 14px 36px rgba(88, 116, 93, 0.16)',
+            aura: '0 30px 70px rgba(17, 24, 39, 0.28)'
           },
           fontFamily: {
-            display: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'serif']
+            display: ['Cormorant Garamond', 'Noto Serif TC', 'serif'],
+            sans: ['Manrope', 'Noto Serif TC', 'sans-serif']
           }
         }
       }
@@ -35,11 +40,16 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', 'Noto Serif TC', sans-serif;
+      background-color: #f6efe5;
+    }
     summary::-webkit-details-marker { display: none; }
     .day-link {
       border: 1px solid transparent;
-      transition: background-color .16s ease, border-color .16s ease, color .16s ease;
+      transition: background-color .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
     }
+    .day-link:hover { transform: translateY(-1px); }
     .day-link.active {
       background: rgba(217, 227, 207, .74);
       border-color: rgba(88, 116, 93, .28);
@@ -61,58 +71,114 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
       mix-blend-mode: multiply;
     }
+    .hero-photo {
+      background-image:
+        linear-gradient(180deg, rgba(10, 15, 27, 0.08), rgba(10, 15, 27, 0.38)),
+        linear-gradient(90deg, rgba(16, 27, 54, 0.75) 0%, rgba(16, 27, 54, 0.24) 28%, rgba(16, 27, 54, 0.08) 45%, rgba(16, 27, 54, 0.22) 100%),
+        url('./assets/kanazawa-winter-hero.webp');
+      background-size: cover;
+      background-position: center;
+    }
+    .section-glow {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-glow::after {
+      content: '';
+      position: absolute;
+      inset: auto -5rem -6rem auto;
+      width: 16rem;
+      height: 16rem;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(201,154,59,.18), transparent 68%);
+      pointer-events: none;
+    }
   </style>
 </head>
 <body class="paper grain text-sumi antialiased">
   <div class="mx-auto min-h-screen max-w-7xl px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
-    <header class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/70 shadow-soft backdrop-blur-xl">
+    <header class="section-glow relative overflow-hidden rounded-[2rem] border border-white/75 bg-white/62 shadow-soft backdrop-blur-xl">
       <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-moss via-gold to-cedar"></div>
-      <div class="grid gap-0 lg:grid-cols-[1.08fr_0.92fr]">
-        <section class="px-6 py-9 sm:px-10 lg:px-12 lg:py-12">
-          <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-moss shadow-sm">
+      <div class="grid gap-0 xl:grid-cols-[0.98fr_1.02fr]">
+        <section class="relative px-6 py-9 sm:px-10 lg:px-12 lg:py-12">
+          <div class="absolute inset-y-0 right-0 hidden w-px bg-gradient-to-b from-transparent via-line to-transparent xl:block"></div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white/82 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.24em] text-moss shadow-sm">
             <span class="h-2 w-2 rounded-full bg-gold"></span>
             Kanazawa Winter Trip 2027
           </p>
+          <div class="mt-6 flex flex-wrap gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-sumi/48">
+            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Snow + Onsen</span>
+            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Kanazawa + Kyoto</span>
+            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Slow Family Pace</span>
+          </div>
           <h1 class="mt-6 max-w-3xl font-display text-5xl font-semibold tracking-tight text-sumi sm:text-6xl lg:text-7xl">
-            金澤<br><span class="text-moss">6天5夜</span>
+            金澤冬旅<br><span class="text-moss">6天5夜</span>
           </h1>
           <p class="mt-5 max-w-2xl text-base leading-8 text-sumi/70 sm:text-lg">
-            不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。把雪景、溫泉、日式街景與京都收尾整理在同一頁，出發前快速掌握每天重點。
+            不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。把雪景、溫泉、町家夜色與京都收尾排成一頁，出發前一眼就知道這趟旅程的節奏。
           </p>
 
           <div class="mt-8 grid gap-3 text-sm sm:grid-cols-3">
-            <div class="rounded-3xl border border-line bg-white/75 p-4 shadow-sm">
+            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
               <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Duration</div>
               <div class="mt-2 text-2xl font-semibold">6 天 5 夜</div>
             </div>
-            <div class="rounded-3xl border border-line bg-white/75 p-4 shadow-sm">
-              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Pace</div>
-              <div class="mt-2 text-base font-semibold">慢節奏、適合親子</div>
+            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
+              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Rhythm</div>
+              <div class="mt-2 text-base font-semibold">雪景、泡湯、散步、收尾</div>
             </div>
-            <div class="rounded-3xl border border-line bg-white/75 p-4 shadow-sm">
+            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
               <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Transit</div>
               <div class="mt-2 text-base font-semibold">機場＋鐵道＋市區步行</div>
             </div>
           </div>
+
+          <div class="mt-8 rounded-[1.7rem] border border-line/80 bg-sumi px-5 py-5 text-white shadow-aura">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.26em] text-white/55">Travel Mood</p>
+                <p class="mt-2 max-w-xl font-display text-3xl leading-tight text-white sm:text-4xl">
+                  一半是安靜雪夜，一半是暖色燈火。
+                </p>
+              </div>
+              <div class="rounded-3xl border border-white/12 bg-white/8 px-4 py-3 text-sm leading-7 text-white/76 backdrop-blur">
+                這頁不是行程表而已，還想把「會記住的氣氛」一起留下來。
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="relative min-h-[28rem] overflow-hidden border-t border-line bg-sumi text-white lg:border-l lg:border-t-0">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_35%_10%,rgba(255,255,255,.25),transparent_18rem),linear-gradient(145deg,rgba(88,116,93,.92),rgba(35,32,29,.96)_55%,rgba(138,95,63,.86))]"></div>
-          <div class="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/20"></div>
-          <div class="absolute bottom-10 left-8 h-32 w-32 rounded-full border border-gold/40"></div>
+        <section class="relative min-h-[34rem] overflow-hidden border-t border-line xl:border-l xl:border-t-0">
+          <div class="hero-photo absolute inset-0"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_76%_22%,rgba(255,214,156,.32),transparent_18rem),linear-gradient(180deg,rgba(10,15,27,.06),rgba(10,15,27,.42))]"></div>
+          <div class="absolute right-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-white/86 backdrop-blur">AI-crafted hero visual</div>
           <div class="relative flex h-full flex-col justify-between p-6 sm:p-8 lg:p-10">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[0.28em] text-white/60">Route Map</p>
-              <ol class="mt-7 space-y-4">
-                <li class="flex items-center gap-4"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">✈️</span><span>TPE → KIX</span></li>
-                <li class="flex items-center gap-4"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🚆</span><span>KIX → 金澤</span></li>
-                <li class="flex items-center gap-4"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">❄️</span><span>金澤 → 白山一里野</span></li>
-                <li class="flex items-center gap-4"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🏮</span><span>金澤 → 京都</span></li>
-                <li class="flex items-center gap-4"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🧳</span><span>京都 → KIX → TPE</span></li>
+            <div class="max-w-sm rounded-[1.7rem] border border-white/14 bg-white/10 p-5 text-white shadow-aura backdrop-blur-md">
+              <p class="text-xs font-bold uppercase tracking-[0.28em] text-white/58">Route Map</p>
+              <ol class="mt-5 space-y-3 text-sm leading-7 text-white/88">
+                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">✈️</span><span>TPE → KIX</span></li>
+                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🚆</span><span>KIX → 金澤</span></li>
+                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">❄️</span><span>金澤 → 白山一里野</span></li>
+                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🏮</span><span>金澤 → 京都</span></li>
+                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🧳</span><span>京都 → KIX → TPE</span></li>
               </ol>
             </div>
-            <div class="mt-8 rounded-[1.6rem] border border-white/15 bg-white/10 p-5 text-sm leading-7 text-white/78 backdrop-blur">
-              從抵達金澤、白山一里野雪景與溫泉，到金澤市區散步，再以京都作為旅程尾聲；每天只保留最需要掌握的路線與節奏。
+            <div class="grid gap-4 md:grid-cols-[0.95fr_1.05fr]">
+              <div class="rounded-[1.7rem] border border-white/14 bg-white/12 p-5 text-white backdrop-blur-md">
+                <p class="text-xs font-bold uppercase tracking-[0.24em] text-white/55">Hero Notes</p>
+                <p class="mt-3 text-sm leading-7 text-white/82">
+                  雪、町家、石橋、燈籠與遠處寺塔疊在同一張主視覺裡，讓金澤與京都的情緒先在首屏相遇。
+                </p>
+              </div>
+              <div class="rounded-[1.7rem] border border-white/14 bg-sumi/45 p-5 text-white shadow-aura backdrop-blur-md">
+                <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Best For</p>
+                <div class="mt-3 grid gap-2 text-sm leading-7 text-white/82 sm:grid-cols-2">
+                  <div class="rounded-2xl bg-white/8 px-3 py-2">親子也舒服的慢節奏</div>
+                  <div class="rounded-2xl bg-white/8 px-3 py-2">滑雪日與市區日平衡</div>
+                  <div class="rounded-2xl bg-white/8 px-3 py-2">交通清楚，不需要自駕</div>
+                  <div class="rounded-2xl bg-white/8 px-3 py-2">旅程尾聲留給京都</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -130,11 +196,36 @@
       </div>
     </nav>
 
+    <section class="mt-6 grid gap-4 lg:grid-cols-3">
+      <article class="rounded-[1.8rem] border border-white/80 bg-white/72 p-5 shadow-sm backdrop-blur-xl">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-moss">Moodboard</p>
+        <h2 class="mt-3 font-display text-3xl font-semibold">像旅遊雜誌的開場</h2>
+        <p class="mt-3 text-sm leading-7 text-sumi/65">主視覺用一張帶雪感與暖光的夜景定調，讓下面的摺疊行程卡不只是資訊，而像一頁頁翻開的旅途片段。</p>
+      </article>
+      <article class="rounded-[1.8rem] border border-white/80 bg-sumi px-5 py-5 text-white shadow-aura">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold">Trip Spine</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm leading-7 text-white/82">
+          <span class="rounded-full bg-white/10 px-3 py-2">抵達與安頓</span>
+          <span class="rounded-full bg-white/10 px-3 py-2">滑雪與溫泉</span>
+          <span class="rounded-full bg-white/10 px-3 py-2">兼六園與茶屋街</span>
+          <span class="rounded-full bg-white/10 px-3 py-2">京都散步收尾</span>
+        </div>
+      </article>
+      <article class="rounded-[1.8rem] border border-white/80 bg-gradient-to-br from-tea/80 to-clay/70 p-5 shadow-sm">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-moss">Reading Pace</p>
+        <p class="mt-3 text-sm leading-7 text-sumi/72">資訊密度刻意壓低，目的是讓你在手機上也能快速掃到「今天重點是什麼」，而不是掉進一整頁流水帳。</p>
+      </article>
+    </section>
+
     <section class="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
       <aside class="rounded-[2rem] border border-white/80 bg-white/70 p-6 shadow-sm backdrop-blur-xl lg:sticky lg:top-24 lg:self-start">
         <p class="text-xs font-bold uppercase tracking-[0.24em] text-moss">Overview</p>
         <h2 class="mt-3 font-display text-3xl font-semibold">每日行程總覽</h2>
         <p class="mt-3 text-sm leading-7 text-sumi/65">從移動日、雪日、金澤市區到京都收尾，快速掌握每一天的主要節奏。</p>
+        <div class="mt-6 rounded-[1.6rem] border border-line bg-sumi px-4 py-4 text-white">
+          <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Visual Rhythm</p>
+          <p class="mt-2 text-sm leading-7 text-white/78">Day 1 先收斂，Day 2 拉滿雪景，Day 3-4 把金澤最有畫面的段落打開，最後用京都把情緒慢慢放下來。</p>
+        </div>
         <div class="mt-6 space-y-3 text-sm">
           <div class="rounded-2xl bg-tea/60 p-4"><strong>主要亮點：</strong>滑雪場、兼六園、東茶屋街</div>
           <div class="rounded-2xl bg-clay/60 p-4"><strong>旅程節奏：</strong>雪景＋溫泉 → 金澤街景 → 京都收尾</div>
@@ -295,7 +386,7 @@
     </section>
 
     <footer class="mt-8 rounded-[2rem] border border-white/80 bg-white/70 px-6 py-7 text-center text-sm leading-7 text-sumi/62 shadow-sm backdrop-blur-xl">
-      金澤、白山一里野與京都的 6 天 5 夜行程；出發前可依每日卡片快速檢查路線、景點與交通節奏。
+      金澤、白山一里野與京都的 6 天 5 夜行程；現在也多了一張真正能把冬旅氣氛撐起來的主視覺。出發前用每日卡片快速檢查路線，心情也順便先到日本。
     </footer>
   </div>
   <script>
