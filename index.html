@@ -1,427 +1,891 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-TW" class="h-full">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>金澤 2027｜6天5夜行程</title>
-  <meta name="description" content="金澤 2027：台北、關西機場、金澤、白山一里野、京都的 6 天 5 夜不自駕旅行行程。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            washi: '#fbf7ef',
-            snow: '#f7fbff',
-            sumi: '#23201d',
-            moss: '#58745d',
-            cedar: '#8a5f3f',
-            gold: '#c99a3b',
-            tea: '#d9e3cf',
-            clay: '#ead4c2',
-            mist: '#e8eef2',
-            line: '#ded4c7'
-          },
-          boxShadow: {
-            soft: '0 20px 60px rgba(35, 32, 29, 0.10)',
-            lift: '0 14px 36px rgba(88, 116, 93, 0.16)',
-            aura: '0 30px 70px rgba(17, 24, 39, 0.28)'
-          },
-          fontFamily: {
-            display: ['Cormorant Garamond', 'Noto Serif TC', 'serif'],
-            sans: ['Manrope', 'Noto Serif TC', 'sans-serif']
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金澤 5天4夜 冬雪滑雪與古都之旅 (2027/01/20-01/24) | Kanazawa Travel Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kanazawa: {
+                            red: '#9E2A2B',      /* 朱赤 Kurenai */
+                            gold: '#C5A059',     /* 金箔 Kinpaku */
+                            goldlight: '#F4E8C1',
+                            dark: '#1C1D21',     /* 漆黑 Urushi Black */
+                            slate: '#2D3142',
+                            washi: '#FAF8F5',    /* 和紙 Washi Off-white */
+                            card: '#FFFFFF',
+                            green: '#4A6B5D',    /* 松綠 Matsuba */
+                            blue: '#1B4965',     /* 冰藍 Ice Blue */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Zen Old Mincho"', 'serif'],
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Manrope', 'Noto Serif TC', sans-serif;
-      background-color: #f6efe5;
-    }
-    summary::-webkit-details-marker { display: none; }
-    .day-link {
-      border: 1px solid transparent;
-      transition: background-color .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
-    }
-    .day-link:hover { transform: translateY(-1px); }
-    .day-link.active {
-      background: rgba(217, 227, 207, .74);
-      border-color: rgba(88, 116, 93, .28);
-      color: #23201d;
-    }
-    .paper {
-      background-image:
-        radial-gradient(circle at 20% 10%, rgba(255,255,255,.92), transparent 24rem),
-        radial-gradient(circle at 85% 18%, rgba(201,154,59,.14), transparent 18rem),
-        radial-gradient(circle at 82% 82%, rgba(88,116,93,.13), transparent 22rem),
-        linear-gradient(135deg, #fbf7ef 0%, #f7fbff 48%, #f4ede2 100%);
-    }
-    .grain::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .18;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-      mix-blend-mode: multiply;
-    }
-    .hero-photo {
-      background-image:
-        linear-gradient(180deg, rgba(10, 15, 27, 0.08), rgba(10, 15, 27, 0.38)),
-        linear-gradient(90deg, rgba(16, 27, 54, 0.75) 0%, rgba(16, 27, 54, 0.24) 28%, rgba(16, 27, 54, 0.08) 45%, rgba(16, 27, 54, 0.22) 100%),
-        url('./assets/kanazawa-winter-hero.webp');
-      background-size: cover;
-      background-position: center;
-    }
-    .section-glow {
-      position: relative;
-      overflow: hidden;
-    }
-    .section-glow::after {
-      content: '';
-      position: absolute;
-      inset: auto -5rem -6rem auto;
-      width: 16rem;
-      height: 16rem;
-      border-radius: 9999px;
-      background: radial-gradient(circle, rgba(201,154,59,.18), transparent 68%);
-      pointer-events: none;
-    }
-  </style>
+    </script>
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #1C1D21;
+        }
+        .gold-border { border-color: #C5A059; }
+        .gold-gradient { background: linear-gradient(135deg, #C5A059 0%, #E2C982 50%, #B89243 100%); }
+        .red-gradient { background: linear-gradient(135deg, #9E2A2B 0%, #6E1A1B 100%); }
+        .blue-gradient { background: linear-gradient(135deg, #1B4965 0%, #2B5975 100%); }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF8F5; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 3px; }
+    </style>
 </head>
-<body class="paper grain text-sumi antialiased">
-  <div class="mx-auto min-h-screen max-w-7xl px-4 py-5 sm:px-6 lg:px-8 lg:py-8">
-    <header class="section-glow relative overflow-hidden rounded-[2rem] border border-white/75 bg-white/62 shadow-soft backdrop-blur-xl">
-      <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-moss via-gold to-cedar"></div>
-      <div class="grid gap-0 xl:grid-cols-[0.98fr_1.02fr]">
-        <section class="relative px-6 py-9 sm:px-10 lg:px-12 lg:py-12">
-          <div class="absolute inset-y-0 right-0 hidden w-px bg-gradient-to-b from-transparent via-line to-transparent xl:block"></div>
-          <p class="inline-flex items-center gap-2 rounded-full border border-line bg-white/82 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.24em] text-moss shadow-sm">
-            <span class="h-2 w-2 rounded-full bg-gold"></span>
-            Kanazawa Winter Trip 2027
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-sumi/48">
-            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Snow + Onsen</span>
-            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Kanazawa + Kyoto</span>
-            <span class="rounded-full border border-line bg-white/70 px-3 py-2">Slow Family Pace</span>
-          </div>
-          <h1 class="mt-6 max-w-3xl font-display text-5xl font-semibold tracking-tight text-sumi sm:text-6xl lg:text-7xl">
-            金澤冬旅<br><span class="text-moss">6天5夜</span>
-          </h1>
-          <p class="mt-5 max-w-2xl text-base leading-8 text-sumi/70 sm:text-lg">
-            不自駕、順路版本：TPE → KIX → 金澤 → 京都 → KIX → TPE。把雪景、溫泉、町家夜色與京都收尾排成一頁，出發前一眼就知道這趟旅程的節奏。
-          </p>
+<body class="h-full flex flex-col font-sans antialiased selection:bg-kanazawa-goldlight selection:text-kanazawa-dark">
 
-          <div class="mt-8 grid gap-3 text-sm sm:grid-cols-3">
-            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
-              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Duration</div>
-              <div class="mt-2 text-2xl font-semibold">6 天 5 夜</div>
-            </div>
-            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
-              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Rhythm</div>
-              <div class="mt-2 text-base font-semibold">雪景、泡湯、散步、收尾</div>
-            </div>
-            <div class="rounded-3xl border border-line bg-white/78 p-4 shadow-sm">
-              <div class="text-xs font-bold uppercase tracking-[0.18em] text-gold">Transit</div>
-              <div class="mt-2 text-base font-semibold">機場＋鐵道＋市區步行</div>
-            </div>
-          </div>
-
-          <div class="mt-8 rounded-[1.7rem] border border-line/80 bg-sumi px-5 py-5 text-white shadow-aura">
-            <div class="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.26em] text-white/55">Travel Mood</p>
-                <p class="mt-2 max-w-xl font-display text-3xl leading-tight text-white sm:text-4xl">
-                  一半是安靜雪夜，一半是暖色燈火。
-                </p>
-              </div>
-              <div class="rounded-3xl border border-white/12 bg-white/8 px-4 py-3 text-sm leading-7 text-white/76 backdrop-blur">
-                這頁不是行程表而已，還想把「會記住的氣氛」一起留下來。
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="relative min-h-[34rem] overflow-hidden border-t border-line xl:border-l xl:border-t-0">
-          <div class="hero-photo absolute inset-0"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_76%_22%,rgba(255,214,156,.32),transparent_18rem),linear-gradient(180deg,rgba(10,15,27,.06),rgba(10,15,27,.42))]"></div>
-          <div class="absolute right-6 top-6 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-white/86 backdrop-blur">AI-crafted hero visual</div>
-          <div class="relative flex h-full flex-col justify-between p-6 sm:p-8 lg:p-10">
-            <div class="max-w-sm rounded-[1.7rem] border border-white/14 bg-white/10 p-5 text-white shadow-aura backdrop-blur-md">
-              <p class="text-xs font-bold uppercase tracking-[0.28em] text-white/58">Route Map</p>
-              <ol class="mt-5 space-y-3 text-sm leading-7 text-white/88">
-                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">✈️</span><span>TPE → KIX</span></li>
-                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🚆</span><span>KIX → 金澤</span></li>
-                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">❄️</span><span>金澤 → 白山一里野</span></li>
-                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🏮</span><span>金澤 → 京都</span></li>
-                <li class="flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-lg">🧳</span><span>京都 → KIX → TPE</span></li>
-              </ol>
-            </div>
-            <div class="grid gap-4 md:grid-cols-[0.95fr_1.05fr]">
-              <div class="rounded-[1.7rem] border border-white/14 bg-white/12 p-5 text-white backdrop-blur-md">
-                <p class="text-xs font-bold uppercase tracking-[0.24em] text-white/55">Hero Notes</p>
-                <p class="mt-3 text-sm leading-7 text-white/82">
-                  雪、町家、石橋、燈籠與遠處寺塔疊在同一張主視覺裡，讓金澤與京都的情緒先在首屏相遇。
-                </p>
-              </div>
-              <div class="rounded-[1.7rem] border border-white/14 bg-sumi/45 p-5 text-white shadow-aura backdrop-blur-md">
-                <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Best For</p>
-                <div class="mt-3 grid gap-2 text-sm leading-7 text-white/82 sm:grid-cols-2">
-                  <div class="rounded-2xl bg-white/8 px-3 py-2">親子也舒服的慢節奏</div>
-                  <div class="rounded-2xl bg-white/8 px-3 py-2">滑雪日與市區日平衡</div>
-                  <div class="rounded-2xl bg-white/8 px-3 py-2">交通清楚，不需要自駕</div>
-                  <div class="rounded-2xl bg-white/8 px-3 py-2">旅程尾聲留給京都</div>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-kanazawa-dark text-white shadow-md border-b-2 border-kanazawa-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-kanazawa-dark font-serif font-bold text-xl shadow-inner">
+                        金
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-lg sm:text-xl font-bold tracking-wide text-kanazawa-goldlight">金澤 • 白川鄉 • 滑雪 5日紀行</h1>
+                        <p class="text-xs text-gray-400 hidden sm:block">2027/01/20 (三) - 2027/01/24 (日) 長榮 BR158/BR157 小松直飛</p>
+                    </div>
                 </div>
-              </div>
+
+                <!-- Navigation Tabs (Desktop) -->
+                <nav class="hidden md:flex space-x-1" id="desktop-nav">
+                    <button onclick="switchTab('itinerary')" id="nav-itinerary" class="tab-btn active text-kanazawa-gold border-b-2 border-kanazawa-gold px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-map-location-dot"></i> 行程規劃
+                    </button>
+                    <button onclick="switchTab('flight')" id="nav-flight" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-plane"></i> 航班交通
+                    </button>
+                    <button onclick="switchTab('ski')" id="nav-ski" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-person-skiing"></i> 滑雪攻略
+                    </button>
+                    <button onclick="switchTab('gourmet')" id="nav-gourmet" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-utensils"></i> 美食伴手禮
+                    </button>
+                    <button onclick="switchTab('budget')" id="nav-budget" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> 預算試算
+                    </button>
+                    <button onclick="switchTab('checklist')" id="nav-checklist" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-check"></i> 行前清單
+                    </button>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="flex items-center space-x-2">
+                    <button onclick="window.print()" class="text-xs sm:text-sm bg-kanazawa-slate hover:bg-gray-700 text-white px-3 py-1.5 rounded-lg transition border border-gray-600 flex items-center gap-1.5">
+                        <i class="fa-solid fa-print"></i>
+                        <span class="hidden sm:inline">列印 / 匯出</span>
+                    </button>
+                </div>
             </div>
-          </div>
-        </section>
-      </div>
+        </div>
+
+        <!-- Mobile Nav Bar -->
+        <div class="md:hidden flex border-t border-gray-800 bg-kanazawa-dark/95 backdrop-blur overflow-x-auto text-xs py-1">
+            <button onclick="switchTab('itinerary')" id="mob-nav-itinerary" class="flex-1 py-2 text-center text-kanazawa-gold border-b-2 border-kanazawa-gold font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-map-location-dot block text-base mb-0.5"></i>行程
+            </button>
+            <button onclick="switchTab('flight')" id="mob-nav-flight" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-plane block text-base mb-0.5"></i>航班交通
+            </button>
+            <button onclick="switchTab('ski')" id="mob-nav-ski" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-person-skiing block text-base mb-0.5"></i>滑雪
+            </button>
+            <button onclick="switchTab('gourmet')" id="mob-nav-gourmet" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-utensils block text-base mb-0.5"></i>美食
+            </button>
+            <button onclick="switchTab('budget')" id="mob-nav-budget" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-calculator block text-base mb-0.5"></i>預算
+            </button>
+            <button onclick="switchTab('checklist')" id="mob-nav-checklist" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-clipboard-check block text-base mb-0.5"></i>清單
+            </button>
+        </div>
     </header>
 
-    <nav class="sticky top-3 z-10 mt-5 overflow-x-auto rounded-full border border-white/80 bg-white/80 p-2 shadow-sm backdrop-blur-xl">
-      <div class="flex min-w-max gap-2 text-sm font-semibold text-sumi/70">
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day1" aria-current="false">Day 1</a>
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day2" aria-current="false">Day 2</a>
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day3" aria-current="false">Day 3</a>
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day4" aria-current="false">Day 4</a>
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day5" aria-current="false">Day 5</a>
-        <a class="day-link rounded-full px-4 py-2 hover:bg-mist" href="#day6" aria-current="false">Day 6</a>
-      </div>
-    </nav>
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
 
-    <section class="mt-6 grid gap-4 lg:grid-cols-3">
-      <article class="rounded-[1.8rem] border border-white/80 bg-white/72 p-5 shadow-sm backdrop-blur-xl">
-        <p class="text-xs font-bold uppercase tracking-[0.22em] text-moss">Moodboard</p>
-        <h2 class="mt-3 font-display text-3xl font-semibold">像旅遊雜誌的開場</h2>
-        <p class="mt-3 text-sm leading-7 text-sumi/65">主視覺用一張帶雪感與暖光的夜景定調，讓下面的摺疊行程卡不只是資訊，而像一頁頁翻開的旅途片段。</p>
-      </article>
-      <article class="rounded-[1.8rem] border border-white/80 bg-sumi px-5 py-5 text-white shadow-aura">
-        <p class="text-xs font-bold uppercase tracking-[0.22em] text-gold">Trip Spine</p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm leading-7 text-white/82">
-          <span class="rounded-full bg-white/10 px-3 py-2">抵達與安頓</span>
-          <span class="rounded-full bg-white/10 px-3 py-2">滑雪與溫泉</span>
-          <span class="rounded-full bg-white/10 px-3 py-2">兼六園與茶屋街</span>
-          <span class="rounded-full bg-white/10 px-3 py-2">京都散步收尾</span>
-        </div>
-      </article>
-      <article class="rounded-[1.8rem] border border-white/80 bg-gradient-to-br from-tea/80 to-clay/70 p-5 shadow-sm">
-        <p class="text-xs font-bold uppercase tracking-[0.22em] text-moss">Reading Pace</p>
-        <p class="mt-3 text-sm leading-7 text-sumi/72">資訊密度刻意壓低，目的是讓你在手機上也能快速掃到「今天重點是什麼」，而不是掉進一整頁流水帳。</p>
-      </article>
-    </section>
-
-    <section class="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
-      <aside class="rounded-[2rem] border border-white/80 bg-white/70 p-6 shadow-sm backdrop-blur-xl lg:sticky lg:top-24 lg:self-start">
-        <p class="text-xs font-bold uppercase tracking-[0.24em] text-moss">Overview</p>
-        <h2 class="mt-3 font-display text-3xl font-semibold">每日行程總覽</h2>
-        <p class="mt-3 text-sm leading-7 text-sumi/65">從移動日、雪日、金澤市區到京都收尾，快速掌握每一天的主要節奏。</p>
-        <div class="mt-6 rounded-[1.6rem] border border-line bg-sumi px-4 py-4 text-white">
-          <p class="text-xs font-bold uppercase tracking-[0.24em] text-gold">Visual Rhythm</p>
-          <p class="mt-2 text-sm leading-7 text-white/78">Day 1 先收斂，Day 2 拉滿雪景，Day 3-4 把金澤最有畫面的段落打開，最後用京都把情緒慢慢放下來。</p>
-        </div>
-        <div class="mt-6 space-y-3 text-sm">
-          <div class="rounded-2xl bg-tea/60 p-4"><strong>主要亮點：</strong>滑雪場、兼六園、東茶屋街</div>
-          <div class="rounded-2xl bg-clay/60 p-4"><strong>旅程節奏：</strong>雪景＋溫泉 → 金澤街景 → 京都收尾</div>
-          <div class="rounded-2xl bg-mist/80 p-4"><strong>交通主軸：</strong>機場、鐵道、市區步行與短程大眾運輸。</div>
-        </div>
-      </aside>
-
-      <main class="space-y-5" id="itinerary">
-        <details id="day1" open class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-clay text-2xl">✈️</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 1 · 移動日</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">TPE → KIX → 金澤</h2>
-              </div>
-            </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-              <section class="rounded-[1.5rem] bg-washi p-5">
-                <h3 class="font-bold text-cedar">今日節奏</h3>
-                <div class="mt-4 space-y-4 border-l-2 border-gold/50 pl-4 text-sm leading-7 text-sumi/68">
-                  <div><strong class="text-sumi">早上：</strong>從台北出發，飛往關西機場，先把通關與行李時間留寬鬆一點。</div>
-                  <div><strong class="text-sumi">中午：</strong>抵達 KIX 後轉乘前往金澤，抓 2–3 小時移動時間。</div>
-                  <div><strong class="text-sumi">下午：</strong>入住飯店、稍作休息，視時間在金澤站周邊熟悉環境。</div>
-                  <div><strong class="text-sumi">晚上：</strong>找一間舒服的餐廳吃晚餐，節奏輕一點就好。</div>
+        <!-- Hero Summary Banner -->
+        <div class="mb-8 rounded-2xl overflow-hidden shadow-lg border border-kanazawa-gold/30 bg-white">
+            <div class="red-gradient text-white p-6 sm:p-8 relative">
+                <div class="absolute right-4 bottom-2 opacity-10 text-9xl font-serif select-none pointer-events-none">雪</div>
+                <div class="relative z-10 max-w-3xl">
+                    <div class="inline-flex items-center gap-2 bg-black/30 border border-kanazawa-gold/50 px-3 py-1 rounded-full text-xs text-kanazawa-goldlight mb-3">
+                        <i class="fa-solid fa-snowflake"></i> 長榮 BR158/BR157 • 住宿：金澤車站周邊飯店
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-tight mb-2">古都金澤 • 白川鄉童話雪村 • 滑雪饗宴</h2>
+                    <p class="text-sm sm:text-base text-gray-200 leading-relaxed">
+                        搭乘長榮直飛小松，以金澤車站為交通樞紐。精選「東茶屋街金箔DIY、白川鄉合掌村玩雪、滑雪場全天飆雪、兼六園雪吊與購物」最完美的 5 天 4 夜冬日行程！
+                    </p>
                 </div>
-              </section>
-              <aside class="rounded-[1.5rem] border border-line bg-white p-5">
-                <h3 class="font-bold text-cedar">重點卡</h3>
-                <div class="mt-4 space-y-3 text-sm text-sumi/68">
-                  <div class="rounded-2xl bg-mist px-4 py-3">主要任務：順利抵達＋安頓</div>
-                  <div class="rounded-2xl bg-clay/55 px-4 py-3">建議心法：不要塞太多景點</div>
-                  <div class="rounded-2xl bg-tea/60 px-4 py-3">交通：TPE → KIX → 金澤站</div>
+            </div>
+
+            <!-- Trip Quick Route Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-gray-200 bg-kanazawa-washi border-t border-gray-200 text-xs sm:text-sm">
+                <div class="p-3 sm:p-4 text-center">
+                    <span class="block text-gray-500 font-bold">Day 1 (1/20 三)</span>
+                    <span class="font-bold text-kanazawa-red">小松➔金澤➔東茶屋街</span>
+                    <span class="block text-[11px] text-gray-500 mt-0.5">金箔 DIY 體驗</span>
                 </div>
-              </aside>
+                <div class="p-3 sm:p-4 text-center">
+                    <span class="block text-gray-500 font-bold">Day 2 (1/21 四)</span>
+                    <span class="font-bold text-kanazawa-green">白川鄉合掌村</span>
+                    <span class="block text-[11px] text-gray-500 mt-0.5">童話雪村玩雪</span>
+                </div>
+                <div class="p-3 sm:p-4 text-center">
+                    <span class="block text-gray-500 font-bold">Day 3 (1/22 五)</span>
+                    <span class="font-bold text-kanazawa-blue">滑雪場全天樂</span>
+                    <span class="block text-[11px] text-gray-500 mt-0.5">IOX-AROSA / 醫王山</span>
+                </div>
+                <div class="p-3 sm:p-4 text-center">
+                    <span class="block text-gray-500 font-bold">Day 4 (1/23 六)</span>
+                    <span class="font-bold text-kanazawa-gold">兼六園➔金澤城➔購物</span>
+                    <span class="block text-[11px] text-gray-500 mt-0.5">21世紀美術館/百番街</span>
+                </div>
+                <div class="p-3 sm:p-4 text-center col-span-2 sm:col-span-1">
+                    <span class="block text-gray-500 font-bold">Day 5 (1/24 日)</span>
+                    <span class="font-bold text-kanazawa-dark">金澤➔小松➔返台</span>
+                    <span class="block text-[11px] text-gray-500 mt-0.5">BR157 11:45 起飛</span>
+                </div>
             </div>
-          </div>
-        </details>
+        </div>
 
-        <details id="day2" class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-snow text-2xl">❄️</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 2 · 雪日</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">白山一里野溫泉滑雪場</h2>
-              </div>
-            </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 md:grid-cols-2">
-              <section class="rounded-[1.5rem] bg-snow p-5">
-                <h3 class="font-bold text-cedar">白天活動</h3>
-                <p class="mt-3 text-sm leading-7 text-sumi/68">以雪上活動為主軸，安排滑雪、玩雪或租借雪具。這一天的畫面感應該很強，很值得留給旅程主視覺。</p>
-              </section>
-              <section class="rounded-[1.5rem] bg-washi p-5">
-                <h3 class="font-bold text-cedar">晚上收尾</h3>
-                <p class="mt-3 text-sm leading-7 text-sumi/68">回到一里野溫泉住宿泡湯，這段很適合做成「今日亮點」的旅遊卡片文字。</p>
-                <div class="mt-4 rounded-2xl bg-white px-4 py-3 text-sm text-sumi/65">交通：金澤 → 白山一里野 → 溫泉住宿</div>
-              </section>
-            </div>
-          </div>
-        </details>
+        <!-- ================= TAB 1: ITINERARY ================= -->
+        <section id="tab-itinerary" class="tab-content space-y-6">
 
-        <details id="day3" class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-tea text-2xl">🌿</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 3 · 市區散步</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">兼六園 → 金澤城公園 → 21世紀美術館</h2>
-              </div>
-            </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 md:grid-cols-3 text-sm leading-7 text-sumi/68">
-              <div class="rounded-[1.5rem] bg-tea/65 p-5"><strong class="text-sumi">兼六園</strong><br>早上看雪景或冬季庭園氛圍，畫面會很乾淨。</div>
-              <div class="rounded-[1.5rem] bg-washi p-5"><strong class="text-sumi">金澤城公園</strong><br>接續歷史建築與公園路線，節奏穩定。</div>
-              <div class="rounded-[1.5rem] bg-mist p-5"><strong class="text-sumi">21世紀美術館</strong><br>下午用室內展覽收尾，閱讀節奏也會比較舒服。</div>
-            </div>
-            <div class="mt-4 rounded-2xl border border-line bg-white px-4 py-3 text-sm text-sumi/65">交通：一里野 → 金澤市區 → 步行／公車短程串接</div>
-          </div>
-        </details>
+            <!-- Day Selection Filter Pills -->
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-200">
+                <div class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 w-full sm:w-auto">
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider mr-1">選擇天數:</span>
+                    <button onclick="filterDay('all')" id="day-btn-all" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-kanazawa-red text-white transition">全部天數</button>
+                    <button onclick="filterDay(1)" id="day-btn-1" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">D1 (1/20 三)</button>
+                    <button onclick="filterDay(2)" id="day-btn-2" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">D2 (1/21 四)</button>
+                    <button onclick="filterDay(3)" id="day-btn-3" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">D3 (1/22 五)</button>
+                    <button onclick="filterDay(4)" id="day-btn-4" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">D4 (1/23 六)</button>
+                    <button onclick="filterDay(5)" id="day-btn-5" class="day-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">D5 (1/24 日)</button>
+                </div>
 
-        <details id="day4" class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-yellow-100 text-2xl">🏮</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 4 · 金澤收尾</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">近江町市場 → 金箔體驗 → 東茶屋街 → 京都</h2>
-              </div>
+                <div class="flex items-center gap-3 text-xs text-gray-500">
+                    <span id="completed-count-badge" class="bg-kanazawa-goldlight text-kanazawa-dark font-bold px-2.5 py-1 rounded-full border border-kanazawa-gold">
+                        行程完成度: <span id="completed-val">0</span> / 12 打卡點
+                    </span>
+                </div>
             </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 md:grid-cols-3 text-sm leading-7 text-sumi/68">
-              <div class="rounded-[1.5rem] bg-yellow-50 p-5"><strong class="text-sumi">近江町市場</strong><br>海鮮早午餐，適合開啟精神很好的一天。</div>
-              <div class="rounded-[1.5rem] bg-washi p-5"><strong class="text-sumi">金箔體驗</strong><br>讓旅行多一點手作與紀念感。</div>
-              <div class="rounded-[1.5rem] bg-clay/55 p-5"><strong class="text-sumi">東茶屋街</strong><br>散步、喝茶、買手信，再轉往京都。</div>
-            </div>
-            <div class="mt-4 rounded-2xl border border-line bg-white px-4 py-3 text-sm text-sumi/65">傍晚交通：金澤 → 京都（電車）</div>
-          </div>
-        </details>
 
-        <details id="day5" class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-rose-100 text-2xl">⛩️</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 5 · 京都漫遊</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">京都：清水寺、祇園、錦市場</h2>
-              </div>
-            </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 md:grid-cols-3 text-sm leading-7 text-sumi/68">
-              <div class="rounded-[1.5rem] bg-rose-50 p-5"><strong class="text-sumi">清水寺＋坂道散步</strong><br>最有京都感的一段，適合慢慢走。</div>
-              <div class="rounded-[1.5rem] bg-washi p-5"><strong class="text-sumi">祇園與花見小路</strong><br>傍晚氣氛漂亮，作為尾聲很剛好。</div>
-              <div class="rounded-[1.5rem] bg-yellow-50 p-5"><strong class="text-sumi">錦市場</strong><br>最後收伴手禮和京都小吃。</div>
-            </div>
-            <div class="mt-4 rounded-2xl border border-line bg-white px-4 py-3 text-sm text-sumi/65">交通：京都市區步行＋公車／地鐵搭配</div>
-          </div>
-        </details>
+            <!-- ITINERARY DAYS CONTAINER -->
+            <div class="space-y-8" id="days-container">
 
-        <details id="day6" class="group scroll-mt-24 overflow-hidden rounded-[2rem] border border-line bg-white/82 shadow-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lift">
-          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6">
-            <div class="flex items-center gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl bg-stone-200 text-2xl">🧳</div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-moss">Day 6 · 返程日</p>
-                <h2 class="mt-1 text-xl font-bold sm:text-2xl">京都半日 → KIX → TPE</h2>
-              </div>
-            </div>
-            <span class="rounded-full border border-line px-3 py-1 text-xs font-bold text-sumi/55 group-open:bg-sumi group-open:text-white">OPEN</span>
-          </summary>
-          <div class="border-t border-line p-5 sm:p-6">
-            <div class="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-              <section class="rounded-[1.5rem] bg-stone-50 p-5">
-                <h3 class="font-bold text-cedar">上午安排</h3>
-                <p class="mt-3 text-sm leading-7 text-sumi/68">可留給京都站周邊或京都鐵道博物館，不需要再硬塞景點。</p>
-              </section>
-              <section class="rounded-[1.5rem] bg-washi p-5">
-                <h3 class="font-bold text-cedar">返程節奏</h3>
-                <p class="mt-3 text-sm leading-7 text-sumi/68">回飯店取行李後前往關西機場，作為旅程最後一張卡片會很收斂、很乾淨。</p>
-                <div class="mt-4 rounded-2xl bg-white px-4 py-3 text-sm text-sumi/65">交通：京都 → KIX → TPE</div>
-              </section>
-            </div>
-          </div>
-        </details>
-      </main>
-    </section>
+                <!-- DAY 1 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" data-day="1">
+                    <div class="bg-kanazawa-slate text-white p-4 sm:p-5 flex items-center justify-between border-b-2 border-kanazawa-gold">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-kanazawa-red text-white text-xs font-bold px-2.5 py-1 rounded">Day 1 • 2027/01/20 (三)</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">小松 ➔ 金澤車站 ➔ 東茶屋街 ➔ 金箔 DIY</h3>
+                        </div>
+                        <span class="text-xs bg-black/30 px-3 py-1 rounded-full text-kanazawa-goldlight"><i class="fa-solid fa-plane-arrival"></i> 11:50 抵達金澤</span>
+                    </div>
 
-    <footer class="mt-8 rounded-[2rem] border border-white/80 bg-white/70 px-6 py-7 text-center text-sm leading-7 text-sumi/62 shadow-sm backdrop-blur-xl">
-      金澤、白山一里野與京都的 6 天 5 夜行程；現在也多了一張真正能把冬旅氣氛撐起來的主視覺。出發前用每日卡片快速檢查路線，心情也順便先到日本。
+                    <div class="p-4 sm:p-6 space-y-6">
+                        <!-- Timeline Entry 0 (Flight & Transit) -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-red border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded">06:35 - 11:50</span>
+                                <span class="text-xs text-gray-500">長榮 BR158 ➔ 機場特急巴士</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">桃園機場起飛 ➔ 小松機場 ➔ 金澤站接駁</h4>
+                            <p class="text-sm text-gray-600">
+                                06:35 台北桃園起飛，10:25 抵達小松機場 (KMQ)。辦理入境後至 1號巴士月台，搭乘配合航班發車的「小松機場特急巴士」（票價 1,400 日圓），約 11:50 直達金澤站西口。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 1 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">11:50 - 13:00</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d1-1')" id="d1-1" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark flex items-center gap-2">
+                                <span>車站飯店寄放行李 & 鼓門巡禮 + 午餐</span>
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                先至金澤車站周邊飯店寄放行李和大衣。欣賞金澤地標「鼓門」與玻璃穹頂「款待巨蛋」。可在車站內「百番街 Rinto / Anto」享用拉麵、天婦羅或海鮮丼。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 2 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">13:30 - 17:00</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d1-2')" id="d1-2" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark flex items-center gap-2">
+                                <span>東茶屋街 (Higashi Chaya) ➔ 金箔 DIY 體驗</span>
+                                <span class="text-xs bg-amber-100 text-amber-800 font-sans px-2 py-0.5 rounded">傳統木造茶屋</span>
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                從金澤站搭乘周遊巴士約 10 分鐘抵達東茶屋街。漫步於江戶時代保留下來的紅格子建築群。
+                                <br>• **金箔 DIY 體驗：** 前往「今井金箔」或「作田金箔」預約手工貼金箔（如金箔小盒、筷子或鏡子手作體驗）。
+                                <br>• **必吃甜點：** 至「箔一」品嚐奢華的整張食用金箔霜淇淋！
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 3 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">18:00 晚餐時間</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d1-3')" id="d1-3" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">晚餐：金澤關東煮 (Oden) 或黑咖哩</h4>
+                            <p class="text-sm text-gray-600">
+                                前往香林坊或金澤站周邊，品嚐高湯燉煮的金澤關東煮（車麩、高知大根、蟹丸）或濃郁的金澤黑咖哩（Go! Go! Curry），暖胃迎接冬夜。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 2 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" data-day="2">
+                    <div class="bg-kanazawa-slate text-white p-4 sm:p-5 flex items-center justify-between border-b-2 border-kanazawa-gold">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-kanazawa-green text-white font-bold text-xs px-2.5 py-1 rounded">Day 2 • 2027/01/21 (四)</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">近郊一日遊：白川鄉 + 合掌村玩雪</h3>
+                        </div>
+                        <span class="text-xs bg-black/30 px-3 py-1 rounded-full text-kanazawa-goldlight"><i class="fa-solid fa-snowflake"></i> 世界遺產雪村</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 space-y-6">
+                        <div class="bg-amber-50 border-l-4 border-kanazawa-gold p-3 text-xs text-amber-900 rounded-r flex items-center gap-2">
+                            <i class="fa-solid fa-bus text-lg text-kanazawa-gold"></i>
+                            <span><strong>交通提醒：</strong> 金澤站東口 2號公車月台搭乘「濃飛/北陸鐵道巴士」直達白川鄉（車程約 1小時20分）。票價來回約 4,500-5,000 JPY，需提前於 Japan Bus Online 劃位！</span>
+                        </div>
+
+                        <!-- Timeline Entry 1 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">08:40 - 10:00</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d2-1')" id="d2-1" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">金澤站東口 ➔ 搭乘高速巴士抵達白川鄉</h4>
+                            <p class="text-sm text-gray-600">
+                                早上於金澤站東口搭巴士出發，途經北陸雪山景致，約 10:00 抵達白川鄉合掌村巴士轉運站。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 2 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">10:00 - 15:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d2-2')" id="d2-2" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">合掌村漫步、荻町城跡展望台 & 堆雪人玩雪</h4>
+                            <p class="text-sm text-gray-600">
+                                • **合掌造參觀：** 走訪傳統茅草屋頂建築「和田家」或「神田家」，感受地爐與歷史文化。<br>
+                                • **展望台俯瞰：** 搭乘村內接駁車登上荻町城跡展望台，將銀白色的童話村落盡收眼底。<br>
+                                • **玩雪體驗：** 在厚厚積雪中堆雪人、拍照打卡。中午享用熱騰騰的飛驒牛串燒、五平餅與朴葉味噌定食。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 3 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">16:00 - 17:25</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d2-3')" id="d2-3" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">搭乘巴士返回金澤站 ➔ 晚餐海鮮鍋/燒肉</h4>
+                            <p class="text-sm text-gray-600">
+                                滿載雪景美照搭乘巴士返回金澤站，晚餐前往車站周邊享用飛驒牛/能登牛燒肉，或加賀海鮮火鍋。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 3 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" data-day="3">
+                    <div class="bg-kanazawa-slate text-white p-4 sm:p-5 flex items-center justify-between border-b-2 border-kanazawa-gold">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-kanazawa-blue text-white font-bold text-xs px-2.5 py-1 rounded">Day 3 • 2027/01/22 (五)</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">滑雪場 (IOX-AROSA / 醫王山) 全天極限飆雪</h3>
+                        </div>
+                        <span class="text-xs bg-black/30 px-3 py-1 rounded-full text-kanazawa-goldlight"><i class="fa-solid fa-person-skiing"></i> 全天滑雪/玩雪體驗</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 space-y-6">
+                        <!-- Ski Resort Choice Info -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-blue-200 rounded-xl p-4 bg-blue-50/50 space-y-2">
+                                <span class="font-bold text-kanazawa-blue text-sm block"><i class="fa-solid fa-mountain font-bold"></i> 首選推薦：IOX-AROSA 滑雪場</span>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    距離金澤約 45-50 分鐘車程。擁有哥德式風格纜車、多條新手至高手雪道、完整雪具租借（Ski/Snowboard/雪服）與小朋友專屬兒童雪上樂園（Snow Park）。
+                                </p>
+                            </div>
+                            <div class="border border-gray-200 rounded-xl p-4 bg-gray-50 space-y-2">
+                                <span class="font-bold text-gray-800 text-sm block"><i class="fa-solid fa-snowflake"></i> 近郊備選：醫王山滑雪場 (Iozen)</span>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    距離金澤市區最近（約 30 分鐘公車/計程車），適合想嘗試初級滑雪、玩雪盆（Sledding）與雪地遊戲的輕鬆行程。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Entry 1 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-blue border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">08:00 - 09:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d3-1')" id="d3-1" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">出發前往滑雪場 ➔ 租借雪具與保暖裝備</h4>
+                            <p class="text-sm text-gray-600">
+                                從金澤出發抵達雪場。於滑雪中心辦理租借：雪板（Ski / Snowboard）、雪靴、雪杖、保暖雪衣雪褲與頭盔。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 2 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-blue border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">10:00 - 15:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d3-2')" id="d3-2" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">全天滑雪體驗、纜車與雪場餐廳午餐</h4>
+                            <p class="text-sm text-gray-600">
+                                於初學者練習場踏雪，或搭乘纜車登上雪道享受馳騁樂趣。午餐在雪場餐廳享用濃郁熱拉麵、日式咖哩飯或炸豬排飯，補充滿滿熱量。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 3 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-blue border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">16:30 - 18:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d3-3')" id="d3-3" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">歸還裝備 ➔ 返回金澤 ➔ 享用溫暖的冬季鍋物</h4>
+                            <p class="text-sm text-gray-600">
+                                歸還雪具後返回金澤飯店放鬆。運動全天後，晚餐安排享用兼具美味與補給的相撲火鍋或加賀旬味蟹肉料理。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 4 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" data-day="4">
+                    <div class="bg-kanazawa-slate text-white p-4 sm:p-5 flex items-center justify-between border-b-2 border-kanazawa-gold">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-kanazawa-gold text-kanazawa-dark font-bold text-xs px-2.5 py-1 rounded">Day 4 • 2027/01/23 (六)</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">兼六園 ➔ 金澤城 ➔ 21世紀美術館 ➔ 購物大獲全勝</h3>
+                        </div>
+                        <span class="text-xs bg-black/30 px-3 py-1 rounded-full text-kanazawa-goldlight"><i class="fa-solid fa-bag-shopping"></i> 文化名勝與購物狂歡</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 space-y-6">
+                        <!-- Timeline Entry 1 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">09:00 - 11:00</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d4-1')" id="d4-1" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark flex items-center gap-2">
+                                <span>兼六園 (Kenrokuen) - 1月「雪吊」冬景</span>
+                                <span class="text-xs bg-blue-100 text-blue-800 font-sans px-2 py-0.5 rounded">三大名園</span>
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                走訪日本三大名園之一的兼六園！1月欣賞唐崎松的傘狀「雪吊（ゆきつり）」與徽軫燈籠，俯瞰霞之池絕美倒影。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 2 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">11:00 - 12:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d4-2')" id="d4-2" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">金澤城公園 ➔ 玉泉院丸庭園</h4>
+                            <p class="text-sm text-gray-600">
+                                穿越石川橋進入金澤城，欣賞獨特的菱櫓與五十間長屋白色瓦片屋頂，感受加賀前田藩的雄偉歷史氣勢。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 3 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">13:00 - 15:30</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d4-3')" id="d4-3" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark flex items-center gap-2">
+                                <span>金澤21世紀美術館 (21st Century Museum)</span>
+                                <span class="text-xs bg-purple-100 text-purple-800 font-sans px-2 py-0.5 rounded">現代藝術地標</span>
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                圓形透明玻璃建築極具美感，體驗代表作《泳池 (The Swimming Pool)》與戶外免費藝術裝置，拍照極為吸睛。
+                            </p>
+                        </div>
+
+                        <!-- Timeline Entry 4 -->
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">16:00 - 20:00</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d4-4')" id="d4-4" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">金澤站百番街 (Anto/Rinto) / FORUS 採買購物</h4>
+                            <p class="text-sm text-gray-600">
+                                • **伴手禮採買：** 在「金澤百番街 Anto」一次買齊烏雞庵金箔蛋糕、諸江屋落雁、羽二重餅與九谷燒瓷器。<br>
+                                • **流行服飾百貨：** 逛車站旁的 Kanazawa FORUS 百貨，採買日系服飾。<br>
+                                • **晚餐豪吃壽司：** 在車站「輝成壽司」或「壽司玉」享用著名的冬味喉黑魚握壽司！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 5 -->
+                <div class="day-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden" data-day="5">
+                    <div class="bg-kanazawa-slate text-white p-4 sm:p-5 flex items-center justify-between border-b-2 border-kanazawa-gold">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-gray-600 text-white font-bold text-xs px-2.5 py-1 rounded">Day 5 • 2027/01/24 (日)</span>
+                            <h3 class="font-serif text-lg sm:text-xl font-bold">飯店退房 ➔ 小松機場 ➔ 長榮 BR157 順利返台</h3>
+                        </div>
+                        <span class="text-xs bg-black/30 px-3 py-1 rounded-full text-kanazawa-goldlight"><i class="fa-solid fa-plane-departure"></i> BR157 11:45 起飛</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 space-y-6">
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-gold border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">08:30 前</span>
+                                <label class="inline-flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
+                                    <input type="checkbox" onchange="toggleSpot('d5-1')" id="d5-1" class="spot-checkbox rounded text-kanazawa-red focus:ring-kanazawa-red"> 打卡完成
+                                </label>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">飯店辦理退房 ➔ 前往金澤站西口 3號月台</h4>
+                            <p class="text-sm text-gray-600">
+                                享用飯店早餐後辦理退房。因住宿於車站周邊，可輕鬆徒步至 **金澤站西口 3號巴士月台**。
+                            </p>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-red border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded">09:10 - 09:55</span>
+                                <span class="text-xs text-gray-500">小松機場特急巴士 (約45分鐘)</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">搭乘接駁巴士直達小松機場 (KMQ)</h4>
+                            <p class="text-sm text-gray-600">
+                                搭乘 09:10 開往小松機場的特急巴士（車票 1,400 日圓，可用 Contactless 信用卡感應刷卡或現場購票），約 09:55 抵達小松機場。
+                            </p>
+                        </div>
+
+                        <div class="relative pl-8 border-l-2 border-kanazawa-gold/50 space-y-2">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-kanazawa-slate border-2 border-white"></div>
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <span class="text-xs font-bold bg-gray-100 text-gray-700 px-2 py-0.5 rounded">11:45 - 14:35</span>
+                                <span class="text-xs text-gray-500">BR157 返回台北</span>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-kanazawa-dark">辦理登機 ➔ 機場免稅店採買 ➔ 順利抵達桃園機場</h4>
+                            <p class="text-sm text-gray-600">
+                                於長榮櫃檯辦理 Luggage Check-in。小松機場內有免稅店可採買最後銘菓伴手禮。11:45 起飛，台灣時間 14:35 順利返抵桃園機場 T2！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: FLIGHT & TRANSIT DETAILS ================= -->
+        <section id="tab-flight" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-dark mb-2"><i class="fa-solid fa-plane text-kanazawa-red"></i> 長榮航空航班與小松機場接駁指南</h3>
+                <p class="text-sm text-gray-600">針對您的行程整理之機票與機場巴士接駁指南：</p>
+            </div>
+
+            <!-- Flight Detail Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Outbound -->
+                <div class="bg-white rounded-2xl shadow-sm border border-kanazawa-red/30 p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b pb-3 border-gray-200">
+                        <span class="bg-kanazawa-red text-white text-xs font-bold px-3 py-1 rounded-full">去程航班 EVA AIR BR158</span>
+                        <span class="text-xs text-gray-500">2027/01/20 (三)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-center">
+                        <div>
+                            <span class="text-2xl font-bold font-serif text-kanazawa-dark">TPE 06:35</span>
+                            <span class="block text-xs text-gray-500">台北桃園 T2</span>
+                        </div>
+                        <i class="fa-solid fa-plane text-kanazawa-red text-xl"></i>
+                        <div>
+                            <span class="text-2xl font-bold font-serif text-kanazawa-dark">KMQ 10:25</span>
+                            <span class="block text-xs text-gray-500">小松機場</span>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 p-3 rounded-xl text-xs text-red-900 space-y-1">
+                        <div>🚌 <strong>小松機場 ➔ 金澤站西口巴士：</strong></div>
+                        <div>• 發車時間：約 11:05~11:15（配合 BR158 航班抵達發車）</div>
+                        <div>• 乘車地點：小松機場國際線出口 1號公車月台</div>
+                        <div>• 車程：約 40 分鐘（直達金澤站西口，票價 1,400 JPY）</div>
+                    </div>
+                </div>
+
+                <!-- Inbound -->
+                <div class="bg-white rounded-2xl shadow-sm border border-kanazawa-gold/50 p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b pb-3 border-gray-200">
+                        <span class="bg-kanazawa-gold text-kanazawa-dark text-xs font-bold px-3 py-1 rounded-full">回程航班 EVA AIR BR157</span>
+                        <span class="text-xs text-gray-500">2027/01/24 (日)</span>
+                    </div>
+                    <div class="flex items-center justify-between text-center">
+                        <div>
+                            <span class="text-2xl font-bold font-serif text-kanazawa-dark">KMQ 11:45</span>
+                            <span class="block text-xs text-gray-500">小松機場</span>
+                        </div>
+                        <i class="fa-solid fa-plane text-kanazawa-gold text-xl"></i>
+                        <div>
+                            <span class="text-2xl font-bold font-serif text-kanazawa-dark">TPE 14:35</span>
+                            <span class="block text-xs text-gray-500">台北桃園 T2</span>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50 p-3 rounded-xl text-xs text-amber-900 space-y-1">
+                        <div>🚌 <strong>金澤站西口 ➔ 小松機場巴士：</strong></div>
+                        <div>• 發車時間：建議搭乘 <strong>09:10</strong> 班次（09:55 抵達機場）</div>
+                        <div>• 乘車地點：金澤站西口 3號公車月台</div>
+                        <div>• 預備時間：起飛前 2 小時完成報到與行李托運</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: SKI GUIDE ================= -->
+        <section id="tab-ski" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-blue mb-2"><i class="fa-solid fa-person-skiing text-kanazawa-blue"></i> Day 3 滑雪場攻略 (IOX-AROSA / 醫王山)</h3>
+                <p class="text-sm text-gray-600">為您的 D3 全天滑雪行程準備的雪場資訊與租借準備：</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-200 space-y-4">
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-blue border-b pb-2"><i class="fa-solid fa-mountain"></i> IOX-AROSA 滑雪場概況</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• <strong>地點：</strong> 富山縣南礪市（距離金澤車程約 45 分鐘）</li>
+                        <li>• <strong>特色：</strong> 擁有 8 條多元雪道、6 人座箱型纜車、瑞士木屋風格纜車站與兒童雪上樂園。</li>
+                        <li>• <strong>租借費用參考：</strong>
+                            <div class="text-xs text-gray-500 mt-1 pl-3 bg-blue-50 p-2 rounded">
+                                - 雪具套裝 (Ski/Board + 襪/鞋/桿): 約 ¥4,500 ~ ¥5,500<br>
+                                - 雪衣雪褲套裝: 約 ¥3,500 ~ ¥4,500<br>
+                                - 纜車一日券: 約 ¥4,200 ~ ¥4,800
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 space-y-4">
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-dark border-b pb-2"><i class="fa-solid fa-vest"></i> 滑雪必備穿著穿搭建議</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• <strong>內層：</strong> 排汗發熱衣（切勿穿純棉衣服，流汗易發冷）。</li>
+                        <li>• <strong>中層：</strong> 刷毛衣或輕薄羽絨背心。</li>
+                        <li>• <strong>外層：</strong> 防水透氣雪衣雪褲（雪場租借即可）。</li>
+                        <li>• <strong>配件必備：</strong> 防水滑雪手套、保暖毛帽、防紫外線雪鏡 (Goggles) 與長版厚雪襪。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: GOURMET & SOUVENIR ================= -->
+        <section id="tab-gourmet" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-red mb-2"><i class="fa-solid fa-utensils"></i> 金澤味蕾特輯與必買伴手禮</h3>
+                <p class="text-sm text-gray-600">金澤背山面海，擁有極其豐富的加賀野菜與日本海海鮮，和菓子工藝亦為日本前三。</p>
+            </div>
+
+            <!-- Food Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 space-y-2">
+                    <span class="text-xs bg-red-100 text-red-800 font-bold px-2.5 py-0.5 rounded">海鮮之王</span>
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-dark">喉黑魚 (Nodoguro / 赤鮭)</h4>
+                    <p class="text-sm text-gray-600">被譽為「白身魚的脂極」，炙燒後香氣逼人。推薦在車站「輝成壽司」或「壽司玉」品嚐。</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 space-y-2">
+                    <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-0.5 rounded">D1 拍照打卡</span>
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-dark">金箔霜淇淋 (Hakuichi)</h4>
+                    <p class="text-sm text-gray-600">整張食用金箔奢華地貼在濃郁牛奶冰淇淋上！「箔一」東茶屋街店是必拍景點。</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 space-y-2">
+                    <span class="text-xs bg-yellow-100 text-yellow-800 font-bold px-2.5 py-0.5 rounded">D4 必買伴手禮</span>
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-dark">烏雞庵 金箔烏骨雞蛋糕</h4>
+                    <p class="text-sm text-gray-600">使用稀有烏骨雞蛋製作，口感濃厚扎實，頂層撒上滿滿金箔，包裝高雅。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 5: BUDGET CALCULATOR ================= -->
+        <section id="tab-budget" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-dark mb-2"><i class="fa-solid fa-calculator text-kanazawa-gold"></i> 旅遊預算與花費估算器</h3>
+                <p class="text-sm text-gray-600">估算您 5天4夜 在金澤（含滑雪與合掌村）的各項開銷（預設以 1 JPY ≈ 0.21 TWD 匯率換算）。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 space-y-4">
+                    <h4 class="font-bold border-b border-gray-200 pb-2 text-kanazawa-slate">填寫估算金額 (日圓 JPY)</h4>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">🏨 金澤車站飯店 (4晚總計)</label>
+                            <input type="number" id="calc-hotel" value="45000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">🚌 交通 (機場巴士/合掌村/公車)</label>
+                            <input type="number" id="calc-transport" value="11000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">⛷️ 滑雪開銷 (雪具租借+纜車券)</label>
+                            <input type="number" id="calc-ski" value="12000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">🍣 美食餐飲 (5天總計)</label>
+                            <input type="number" id="calc-food" value="28000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">🎟️ 門票與金箔 DIY 體驗</label>
+                            <input type="number" id="calc-tickets" value="6000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-600 font-medium mb-1">🛍️ 購物伴手禮</label>
+                            <input type="number" id="calc-shopping" value="18000" oninput="calculateBudget()" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-kanazawa-slate text-white p-6 rounded-2xl shadow-lg border border-kanazawa-gold flex flex-col justify-between space-y-6">
+                    <div>
+                        <span class="text-xs text-kanazawa-goldlight uppercase tracking-wider font-bold">當地估算總支出</span>
+                        <div class="mt-2">
+                            <span class="text-3xl lg:text-4xl font-serif font-bold text-kanazawa-goldlight" id="total-jpy">¥120,000</span>
+                            <span class="text-xs text-gray-300 block mt-1">日圓 JPY</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <span class="text-2xl lg:text-3xl font-serif font-bold text-white" id="total-twd">NT$ 25,200</span>
+                            <span class="text-xs text-gray-300 block mt-1">約新台幣 (未含機票)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 6: CHECKLIST ================= -->
+        <section id="tab-checklist" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-dark mb-2"><i class="fa-solid fa-clipboard-check text-kanazawa-red"></i> 行前準備與預約清單</h3>
+                <p class="text-sm text-gray-600">整理好行前必備事項，點擊勾選協助確認：</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-3">
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-red border-b pb-2"><i class="fa-solid fa-ticket"></i> 必做預約與體驗事項</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span><strong>D2 白川鄉合掌村巴士票預約</strong>（2026/12/21 濃飛巴士劃位）</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span><strong>D1 金箔 DIY 體驗預約</strong>（今井金箔或作田金箔官網預約）</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span><strong>21世紀美術館《泳池》地下層門票預約</strong></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200 space-y-3">
+                    <h4 class="font-serif font-bold text-lg text-kanazawa-dark border-b pb-2"><i class="fa-solid fa-snowflake"></i> 保暖與滑雪裝備準備</h4>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span>防水防滑雪靴 & 兩雙厚雪襪</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span>滑雪用保暖防水手套 & 毛帽/保暖圍巾</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <input type="checkbox" class="rounded text-kanazawa-red focus:ring-kanazawa-red">
+                            <span>護照 & Visit Japan Web 填寫完成 QR Code</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-kanazawa-dark text-gray-400 text-xs py-6 border-t border-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="font-serif text-kanazawa-goldlight text-sm">願您的金澤之旅充滿銀白雪景與金箔的光彩</p>
+            <p>© 2027 金澤 5天4夜 旅遊規劃指南 • 長榮航空直飛專屬版</p>
+        </div>
     </footer>
-  </div>
-  <script>
-    const dayLinks = Array.from(document.querySelectorAll('.day-link'));
-    const daySections = dayLinks
-      .map((link) => document.querySelector(link.getAttribute('href')))
-      .filter(Boolean);
 
-    function setActiveDay(id) {
-      dayLinks.forEach((link) => {
-        const isActive = link.getAttribute('href') === `#${id}`;
-        link.classList.toggle('active', isActive);
-        link.setAttribute('aria-current', isActive ? 'true' : 'false');
-      });
-    }
+    <!-- JavaScript Logic -->
+    <script>
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
 
-    if ('IntersectionObserver' in window && daySections.length) {
-      const observer = new IntersectionObserver((entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActiveDay(visible.target.id);
-      }, { rootMargin: '-28% 0px -58% 0px', threshold: [0.15, 0.35, 0.6] });
+            const target = document.getElementById('tab-' + tabId);
+            if (target) {
+                target.classList.remove('hidden');
+            }
 
-      daySections.forEach((section) => observer.observe(section));
-    }
+            const navButtons = document.querySelectorAll('#desktop-nav .tab-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-kanazawa-gold', 'border-b-2', 'border-kanazawa-gold', 'active');
+                btn.classList.add('text-gray-300');
+            });
 
-    dayLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        const targetId = link.getAttribute('href').slice(1);
-        setActiveDay(targetId);
-      });
-    });
+            const activeBtn = document.getElementById('nav-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-300');
+                activeBtn.classList.add('text-kanazawa-gold', 'border-b-2', 'border-kanazawa-gold', 'active');
+            }
 
-    setActiveDay(location.hash ? location.hash.slice(1) : 'day1');
-  </script>
+            const mobButtons = document.querySelectorAll('.md\\:hidden button');
+            mobButtons.forEach(btn => {
+                btn.classList.remove('text-kanazawa-gold', 'border-b-2', 'border-kanazawa-gold');
+                btn.classList.add('text-gray-400');
+            });
+
+            const activeMobBtn = document.getElementById('mob-nav-' + tabId);
+            if (activeMobBtn) {
+                activeMobBtn.classList.remove('text-gray-400');
+                activeMobBtn.classList.add('text-kanazawa-gold', 'border-b-2', 'border-kanazawa-gold');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function filterDay(dayNum) {
+            const cards = document.querySelectorAll('.day-card');
+            const btns = document.querySelectorAll('.day-filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-kanazawa-red', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            if (dayNum === 'all') {
+                cards.forEach(card => card.classList.remove('hidden'));
+                document.getElementById('day-btn-all').classList.remove('bg-gray-100', 'text-gray-700');
+                document.getElementById('day-btn-all').classList.add('bg-kanazawa-red', 'text-white');
+            } else {
+                cards.forEach(card => {
+                    if (card.getAttribute('data-day') == dayNum) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                const activeBtn = document.getElementById('day-btn-' + dayNum);
+                if (activeBtn) {
+                    activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+                    activeBtn.classList.add('bg-kanazawa-red', 'text-white');
+                }
+            }
+        }
+
+        function toggleSpot(spotId) {
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('.spot-checkbox');
+            let completed = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) completed++;
+            });
+
+            const valSpan = document.getElementById('completed-val');
+            if (valSpan) valSpan.innerText = completed;
+        }
+
+        function calculateBudget() {
+            const hotel = parseFloat(document.getElementById('calc-hotel').value) || 0;
+            const transport = parseFloat(document.getElementById('calc-transport').value) || 0;
+            const ski = parseFloat(document.getElementById('calc-ski').value) || 0;
+            const food = parseFloat(document.getElementById('calc-food').value) || 0;
+            const tickets = parseFloat(document.getElementById('calc-tickets').value) || 0;
+            const shopping = parseFloat(document.getElementById('calc-shopping').value) || 0;
+
+            const totalJpy = hotel + transport + ski + food + tickets + shopping;
+            const totalTwd = Math.round(totalJpy * 0.21);
+
+            document.getElementById('total-jpy').innerText = '¥' + totalJpy.toLocaleString();
+            document.getElementById('total-twd').innerText = 'NT$ ' + totalTwd.toLocaleString();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            calculateBudget();
+            updateProgress();
+        });
+    </script>
 </body>
 </html>
