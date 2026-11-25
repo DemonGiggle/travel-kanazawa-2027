@@ -47,6 +47,9 @@
                     <button onclick="switchTab('itinerary')" id="nav-itinerary" class="tab-btn active text-kanazawa-gold border-b-2 border-kanazawa-gold px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
                         <i class="fa-solid fa-map-location-dot"></i> 行程規劃
                     </button>
+                    <button onclick="switchTab('map')" id="nav-map" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
+                        <i class="fa-solid fa-map"></i> 互動地圖
+                    </button>
                     <button onclick="switchTab('flight')" id="nav-flight" class="tab-btn text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors flex items-center gap-2">
                         <i class="fa-solid fa-plane"></i> 航班交通
                     </button>
@@ -78,6 +81,9 @@
         <div class="md:hidden flex border-t border-gray-800 bg-kanazawa-dark/95 backdrop-blur overflow-x-auto text-xs py-1">
             <button onclick="switchTab('itinerary')" id="mob-nav-itinerary" class="flex-1 py-2 text-center text-kanazawa-gold border-b-2 border-kanazawa-gold font-medium whitespace-nowrap px-3">
                 <i class="fa-solid fa-map-location-dot block text-base mb-0.5"></i>行程
+            </button>
+            <button onclick="switchTab('map')" id="mob-nav-map" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
+                <i class="fa-solid fa-map block text-base mb-0.5"></i>地圖
             </button>
             <button onclick="switchTab('flight')" id="mob-nav-flight" class="flex-1 py-2 text-center text-gray-400 font-medium whitespace-nowrap px-3">
                 <i class="fa-solid fa-plane block text-base mb-0.5"></i>航班交通
@@ -569,6 +575,36 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- ================= TAB: INTERACTIVE MAP ================= -->
+        <section id="tab-map" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-2xl font-serif font-bold text-kanazawa-dark mb-2"><i class="fa-solid fa-map text-kanazawa-red"></i> D4 1/23(六) 互動地圖・街道版</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    S Neon Hotel → 1 兼六園桂坂口 → 2 金澤城 → 3 午餐 → 4 21世紀美術館 → 5 百番街 → 6 輝壽司。<br>
+                    <b>橘實線 = 車 / 巴士</b>・<b class="text-green-700">綠虛線 = 步行</b>・底圖 © OpenStreetMap contributors・繞行 routing.openstreetmap.de
+                </p>
+                <div class="mt-3 flex flex-wrap gap-2 text-sm">
+                    <a href="./d4_osm_map.html" target="_blank" class="bg-kanazawa-dark text-white px-4 py-2 rounded-lg border border-kanazawa-gold hover:bg-black transition">開互動版大地圖 ➔</a>
+                    <button onclick="switchTab('itinerary'); setTimeout(()=>filterDay(4),100)" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition">回 D4 行程細節</button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-kanazawa-gold/40 overflow-hidden">
+                <iframe src="./d4_osm_map.html" class="w-full" style="height:70vh; min-height:480px; border:0" loading="lazy" title="D4 互動地圖"></iframe>
+                <div class="p-3 text-xs sm:text-sm text-gray-600 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100">
+                    <span>可縮放・點標看時間・手機可雙指縮放</span>
+                    <a href="./d4_osm_map.html" target="_blank" class="text-kanazawa-gold font-bold underline">另開全螢幕 ➔</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="p-4 sm:p-5 border-b border-gray-100">
+                    <h4 class="font-serif font-bold text-kanazawa-dark">靜態版總覽（載入快・列印用）</h4>
+                </div>
+                <img src="./d4_osm_map.png" alt="D4 街道版 OSM 路線圖" class="w-full h-auto block" loading="lazy">
             </div>
         </section>
 
